@@ -1,5 +1,7 @@
 package brobsi;
 
+import java.awt.PageAttributes.MediaType;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -12,7 +14,7 @@ import org.json.JSONObject;
 public class FtoCService {
  
 	  @GET
-	  @Produces("application/json")
+	  @Produces("application/xml")
 	  public Response convertFtoC() throws JSONException {
  
 		JSONObject jsonObject = new JSONObject();
