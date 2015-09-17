@@ -40,15 +40,34 @@ public class Anmeldung {
 //									"</LinkControl>" + 
 //								"</LinkScreen>" + 
 
-								"<IoScreen>"+
-									"<IoObject>"+
-											"<IdScanner>1"+
-												"<Label>"+
-													
-												"<Label>"+
-											"<IdScanner>"+
-									"<IoObject>"+
-								"<IoScreen>"+
+
+								
+								
+								
+ 								"<LinkControl>"+
+ 								"<LinkItem href='http://localhost:8080/brobsi/brobsi/monir.xml'>"+
+		 						"<Label imgsrc='./priner.png'></Label>"+
+                                "<Details><Detail>A.jpg</Detail></Details>"+
+                                "</LinkItem>"+
+                                "<LinkItem href='http://localhost:8080/brobsi/brobsi/monir.xml'>"+
+                                "<Label imgsrc='./priner.png'></Label>"+
+                                "<Details><Detail>B.jpg</Detail></Details>"+
+                                "</LinkItem>"+
+                                "<LinkItem href='http://localhost:8080/brobsi/brobsi/monir.xml'>"+
+                                "<Label imgsrc='./priner.png'></Label>"+
+                                "<Details><Detail>C.jpg</Detail></Details>"+
+                                "</LinkItem>"+
+                                "<LinkItem href='http://localhost:8080/brobsi/brobsi/monir.xml'>"+
+                                "<Label imgsrc='./priner.png'></Label>"+
+                                "<Details><Detail>D.jpg</Detail></Details>"+
+                                "</LinkItem>"+
+                        "</LinkControl>"+
+
+								
+								
+								
+
+						
 							"</UiScreen>" +
 						"]]>" + 
 					"</Script>" + 
