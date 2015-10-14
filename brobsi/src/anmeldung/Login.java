@@ -1,37 +1,39 @@
 package anmeldung;
 
-import javax.ws.rs.GET;
+
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 
 @Path("login")
-public class Login {
-String link="http://172.16.100.196:8080/brobsi/brobsi/anmeldung";	
+public class Login {	
 	@POST
 	@Produces("application/xml")
 	public String login(){
 		return "<?xml version='1.0' encoding='utf-8'?>" + 
-					"<SerioCommands version='1.1'>" + 
+					"<SerioCommands version='1.0'>" + 
 						"<DisplayForm>" + 
 							"<Script>" + 
 								"<![CDATA["+
-									"<UiScreen>"+ 
-						            	"<Title>Bitte wählen Sie?</Title>"+
-						            		"<LinkScreen>"+
-						            			"<LinkControl>"+
-						            				"<LinkItem href='http://172.16.100.196:8080/brobsi/brobsi/anmeldung'>"+
-						            					"<Label>Einloggen</Label>"+
-						            					//"<Href>http://172.16.100.196:8080/brobsi/brobsi/anmeldung<Href>"+
-						            				"</LinkItem>"+
-						            				"<LinkItem href='./2.xml'>"+
-						            					"<Label>ID-Karte</Label>"+
-						            				"</LinkItem>"+
-						            				"<LinkItem href='./3.xml'>"+
-						            					"<Label>Gast</Label>"+
-						            				"</LinkItem>"+
-						            			"</LinkControl>"+
-						            		"</LinkScreen>"+
+									"<UiScreen info Level='Normal'>"+ 
+						            	"<Title>Hello BSI</Title>"+
+						            		"<AutoTransition>300</AutoTransition>"+
+						            			"<Operations>"+
+						            				"<Op type='Submit' action='./next.xml'>"+
+						            					"<Label imgsrc='submit.jpg'>Submit</Label>"+
+						            				 "</Op>"+
+						            				 "<Op type='Submit' action='./next.xml'>"+
+						            					"<Label imgsrc='back.jpg'>Back</Label>"+
+						            				 "</Op>"+
+												"</Operations>"+
+						            		
+						            		"<IoScreen>"+
+						            			"<IoObject>"+
+						            				"<Title>Welcome To BSI<Title>"+
+													"<Description>Hello BSI World<Description>"+
+													"<Message>Press OK or Start to proceed<Message>"+
+						            			"</IoObject>"+
+						            		"</IoScreen>"+
 									"</UiScreen>" +
 								"]]>" + 
 							"</Script>" + 

@@ -12,39 +12,38 @@ public class Scannen {
 	public String login(){
 		return 		
 			"<?xml version='1.0' encoding='utf-8'?>" + 
-			"<SerioCommands version='v009'>" + 
-				"<DisplayForm>" + 
-					"<Script>" + 
-						"<![CDATA[" +
-							"<UiScreen>" + 
-								"<Title>Scannen</Title>" + 
-									"<LinkScreen>" + 
-										
-										"<LinkControl>" + 
-											
-											"<LinkItem href='./1.xml'>"+
-												"<Label>scan 2 email</Label>"+ 
-											"</LinkItem>" + 
-											
-											"<LinkItem href='./2.xml'>"+
-												"<Label>scan2server</Label>" + 
-											"</LinkItem>"+ 
-									
-											"<LinkItem href='./3.xml'>"+
-												"<Label>scan3group</Label>" + 
-											"</LinkItem>"+ 
-										
-											"<LinkItem href='./4.xml'>"+
-												"<Label>scan2xxx</Label>"+ 
-											"</LinkItem>"+ 
-											
-									"</LinkControl>" + 
-								"</LinkScreen>" + 
-							"</UiScreen>" +
-						"]]>" + 
-					"</Script>" + 
-				"</DisplayForm>" + 
+			"<SerioCommands version='1.0'>" + 
+				"<IoScanAndSend>"+
+					"<TxProfiles>"+
+						"<Cifs>"+
+							"<CifsParams>"+
+							"<Host>172.16.100.156</Host>"+
+							"<StoreDir>Ablage</StoreDir>"+
+							"<FileName>ÆÆÆÆÆÆÆÆÆx</FileName>"+
+							"<FileNameFixed>true</FileNameFixed>"+
+							"<AuthMethod>Auto</AuthMethod>"+
+							"<User>Druckertester</User>"+
+							"<Password>drucken</Password>"+
+							"<KerberosServer></KerberosServer>"+
+							"</CifsParams>"+
+						"</Cifs>"+
+					"</TxProfiles>"+
+						"<ScanTray>ADF</ScanTray>"+
+						"<ColorMode>Color</ColorMode>"+
+						"<Resolution>Normal</Resolution>"+
+						"<FileType>PDF</FileType>"+
+				"</IoScanAndSend>"+
+					"<DisplayInfo>"+ 
+						"<Script>"+ 
+							"<![CDATA[<?xml version='1.0' encoding='utf-8'?>"+
+								"<UiScreen>"+
+									"<NullScreen></NullScreen>"+
+								"</UiScreen>" +
+							"]]>"+ 
+						"</Script>"+ 
+					"</DisplayInfo>"+ 
 			"</SerioCommands>";
 	}
-	
 }
+//"<PassiveMode>true</PassiveMode>"+
+//"<PortNum>21</PortNum>"+
